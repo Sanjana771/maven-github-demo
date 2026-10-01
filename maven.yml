@@ -1,0 +1,23 @@
+name:Maven Build
+
+on:
+	push:
+		branches:["main"]
+		
+   pull_request:
+	branch:["main"]
+	
+jobs:
+	build:
+		runs-on:ubuntu-latest
+		
+		steps:
+			name:checkout source code 
+			uses:actions/checkout@v6
+			
+			name:set up JDK
+			uses:actions/setup-java@v4
+		    with:
+				java.version
+	
+	
